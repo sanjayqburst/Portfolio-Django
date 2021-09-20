@@ -41,53 +41,18 @@
 	<body>
 		<main>
 			<section class="py-5 text-center container">
+				{% for course in courses.all %}
 				<div class="row py-lg-5">
 					<div class="col-lg-6 col-md-8 mx-auto">
-						<h1 class="fw-light">My portfolio</h1>
-						<p class="lead text-muted">
-							Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry's standard dummy text
-							ever since the 1500s, when an unknown printer took a galley of
-							type and scrambled it to make a type specimen book.
-						</p>
-						<p>
-							<a
-								href="mailto:sanjay.mohan@qburst.com"
-								class="btn btn-primary my-2"
-								>Email</a
-							>
-							<a
-								href="https://www.linkedin.com/in/sanjay-mohan-gecb/"
-								class="btn btn-secondary my-2"
-								>Linked-in</a
-							>
-						</p>
-						<img src="{% static 'logo.jpg' %}" alt="Logo" height="300" />
+						<h1 class="fw-light">Course Detail</h1>
+						<p class="lead text-muted">{{course.summary}}</p>
+						<img src="{{course.image.url" alt="image" height="300" />
 					</div>
 				</div>
-			</section>
+				{% endfor %}
 
-			<div class="album py-5 bg-light">
-				<div class="container">
-					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-						{% for course in courses.all %}
-						<div class="col">
-							<div class="card shadow-sm">
-								<a href="{% url 'detail' course.id %}">
-									<img
-										src="{{course.image.url}}"
-										alt="image"
-										class="card-img-top"
-								/></a>
-								<div class="card-body">
-									<p class="card-text">{{course.summary}}</p>
-								</div>
-							</div>
-						</div>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
+				<a href="{% url 'index' %}" class="btn btn-primary my-2"></a>
+			</section>
 		</main>
 
 		<script
