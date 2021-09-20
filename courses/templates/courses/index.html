@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+	{% load static %}
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,15 +59,14 @@
 							<a href="#" class="btn btn-primary my-2">Email</a>
 							<a href="#" class="btn btn-secondary my-2">Linked-in</a>
 						</p>
+						<img src="{% static 'logo.jpg' %}" alt="Logo" height="300" />
 					</div>
 				</div>
 			</section>
 
 			<div class="album py-5 bg-light">
 				<div class="container">
-
 					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
 						<div class="col">
 							<div class="card shadow-sm">
 								<svg
@@ -114,9 +114,9 @@
 								</div>
 							</div>
 						</div>
-                        </div>
-                        </div>
-						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<script
