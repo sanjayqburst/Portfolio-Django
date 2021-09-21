@@ -41,17 +41,14 @@
 	<body>
 		<main>
 			<section class="py-5 text-center container">
-				{% for course in courses.all %}
 				<div class="row py-lg-5">
 					<div class="col-lg-6 col-md-8 mx-auto">
 						<h1 class="fw-light">Course Detail</h1>
-						<p class="lead text-muted">{{course.summary}}</p>
-						<img src="{{course.image.url" alt="image" height="300" />
+						<p class="lead text-muted">{{ course.summary }}</p>
+						<img src="{{ course.image.url }}" alt="image" height="300" />
 					</div>
 				</div>
-				{% endfor %}
-
-				<a href="{% url 'index' %}" class="btn btn-primary my-2"></a>
+						<a href="{% url 'index' %}" class="btn btn-primary my-2">BACK</a>
 			</section>
 		</main>
 
